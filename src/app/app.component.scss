@@ -1,0 +1,30 @@
+@import "src/styles/styleVariables";
+
+
+::ng-deep .custom-outline-secondary.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: $tertiary-color !important;
+}
+.main-content{
+  width: 100vw;
+  background: $page-background-color 0% 0% no-repeat padding-box;
+  opacity: 1;
+  min-height: 100vh;
+
+  .header-container{
+    width: 100%;
+    margin-bottom: 2px;
+  }
+
+  .app-component-wrapper{
+    height: 100% !important;
+    .headerTitle{
+      padding: 50px 0px 0px 100px;
+      font-size: 26px;
+      font-weight: 400;
+    }
+  }
+
+  .mat-tooltip.tooltip{
+    font-size: 18px!important;
+  }
+}

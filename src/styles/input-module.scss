@@ -1,0 +1,182 @@
+@import "src/styles/styleVariables";
+
+:host ::ng-deep {
+
+  .main-section-input-wrapper {
+    margin: 10px 0 10px 0;
+
+    mat-expansion-panel {
+      background-color: $input-background-color;
+      color: $white;
+
+      mat-expansion-panel-header {
+        mat-panel-description {
+          color: $white;
+        }
+      }
+    }
+
+    .primary-holder {
+      border: 1px solid $secondary-color;
+
+      mat-panel-title {
+        color: $secondary-color;
+      }
+
+      .mat-expansion-panel-header .mat-expansion-indicator::after {
+        color: $secondary-color;
+      }
+    }
+
+    .secondary-holder {
+      border: 1px solid $tertiary-color;
+
+      mat-panel-title {
+        color: $tertiary-color;
+      }
+
+      .mat-expansion-panel-header .mat-expansion-indicator::after {
+        color: $tertiary-color;
+      }
+    }
+  }
+
+  .document-icon{
+    height: 34px !important;
+  }
+
+  .document-name{
+    color: $primary-color;
+    text-overflow: ellipsis;
+  }
+  .document-size{
+    font-size: 10px;
+    color: $h1-h2-color;
+  }
+
+  .small-box {
+    border: 2px solid $box-border-color;
+    border-radius: 8px;
+    padding: 10px 10px 10px 20px;
+  }
+
+  .align-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .box {
+    border: 2px solid $box-border-color;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .section-name{
+    color: $h1-h2-color;
+    font-size: 1rem;
+  }
+
+  .hint-icon{
+    color: $tertiary-button-color;
+  }
+
+
+  .section-title {
+    height: auto;
+    font-family: "Proxima Nova Semibold", serif;
+    color: $white;
+    font-size: 1.13rem;
+  }
+
+  .section-sub-title {
+    color: $warning-color;
+    font-size: .8rem;
+  }
+
+  .section-divider {
+    border-bottom: 2px solid $box-border-color;
+  }
+
+  .main-section-divider {
+     mix-blend-mode: overlay;
+     opacity: 0.9;
+     border-bottom: 2px solid #ffffff;
+  }
+
+  .required:after {
+    content: " *";
+    color: red;
+  }
+
+  mat-hint {
+    color: $tertiary-button-color !important;
+  }
+
+  mat-label {
+    font-family: "Proxima Nova Regular", serif !important;
+    font-size: 16px !important;
+  }
+
+
+  // style to remove the extra top padding in form field
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding-top: 6px !important;
+  }
+}
+
+// custom style for form field suffix
+::ng-deep .mat-form-field-suffix {
+  top: 0 !important;
+}
+
+
+// custom styling for angular material select
+
+::ng-deep {
+  .mat-select-panel {
+    background: $menu-background-color !important;
+    border: 2px solid $card-border-color !important;
+
+    .mat-option.mat-selected:not(.mat-option-multiple) {
+      background: $menu-item-hover-color !important;
+      color: white !important;
+    }
+  }
+
+}
+
+
+::ng-deep .custom-outline-primary.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: $secondary-color !important;
+}
+
+::ng-deep .custom-outline-secondary.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: $tertiary-color !important;
+}
+
+::ng-deep .mat-autocomplete-panel {
+  background: $menu-background-color !important;
+}
+
+.mat-select-panel {
+  background: $menu-background-color !important;;
+}
+
+.mat-option {
+  color: $white;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  span {
+    padding: 0 10px 0 10px;
+  }
+
+  :hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+    background: $menu-item-hover-color;
+  }
+}
+
+::ng-deep .mat-checkbox-disabled{
+  opacity: 0.5;
+}
+

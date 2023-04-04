@@ -1,0 +1,95 @@
+<form [formGroup]="tenantDetailsForm" class="tenant-details-form" (ngSubmit)="onSubmit()">
+  <div class="tenant-details-form-field">
+    <mat-label class="required">Organization Name</mat-label>
+    <mat-form-field for="orgName" class="custom-outline-secondary" appearance="outline">
+      <input type="text" (change)="updateQualifier()" matInput  class="form-control" formControlName="orgName" placeholder="Organization Name" >
+
+      <mat-error *ngIf="tenantDetailsForm.controls['orgName'].errors">
+        <div *ngIf="tenantDetailsForm.controls['orgName'].errors['required']">
+          Organization Name is <strong>required</strong>
+        </div>
+
+        <div *ngIf="tenantDetailsForm.controls['orgName'].errors['minlength']">
+          Name must be at least 5 characters long.
+        </div>
+        <div *ngIf="tenantDetailsForm.controls['orgName'].errors['maxlength']">
+          Name can be max 10 characters long.
+        </div>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="tenant-details-form-field">
+    <mat-label class="required">Domain qualifier</mat-label>
+    <mat-form-field class="custom-outline-secondary" appearance="outline">
+      <input type="text" matInput class="form-control" formControlName="domainQualifier" placeholder="Domain qualifier"  [value]="qualifierName">
+      <span class="suffixtext" matTextSuffix>.one2four.net</span>
+
+      <mat-error *ngIf="tenantDetailsForm.controls['domainQualifier'].errors">
+        <div *ngIf="tenantDetailsForm.controls['domainQualifier'].errors['required']">
+          Domain qualifier is <strong>mandatory</strong>
+        </div>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="tenant-details-form-field">
+    <mat-label class="required">Subscription</mat-label>
+    <mat-form-field class="custom-outline-secondary" appearance="outline">
+      <mat-select [(value)]="selected" class="form-control" formControlName="subscription"  >
+        <mat-option value="0">None</mat-option>
+        <mat-option value="standard">Iteaser standard</mat-option>
+      </mat-select>
+      <mat-error *ngIf="tenantDetailsForm.controls['subscription'].errors" >
+        Subscription is <strong>mandatory</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="pointOfContact">
+    <h2>Point of Contact</h2>
+    <div class="tenant-details-form-field">
+      <mat-label class="required">Email</mat-label>
+      <mat-form-field class="custom-outline-secondary" appearance="outline">
+        <input type="email" matInput
+               class="form-control"
+               formControlName="emailField"
+               placeholder="Email"
+              />
+
+        <mat-error *ngIf="tenantDetailsForm.controls['emailField'].errors"  >
+          <div *ngIf="tenantDetailsForm.controls['emailField'].errors['required']" >
+            Email is <strong>mandatory</strong>
+          </div>
+
+          <div *ngIf="tenantDetailsForm.controls['emailField'].errors['email']" >
+            Please enter the valid Email
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="tenant-details-form-field">
+      <mat-label class="required">First Name</mat-label>
+      <mat-form-field class="custom-outline-secondary" appearance="outline">
+        <input type="text" matInput class="form-control" formControlName="firstName" placeholder="Enter First Name" >
+
+        <mat-error *ngIf="tenantDetailsForm.controls['firstName'].errors"  >
+          <div *ngIf="tenantDetailsForm.controls['firstName'].errors['required']" >
+          First Name is <strong>mandatory</strong>
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="tenant-details-form-field">
+      <mat-label class="required">Last Name</mat-label>
+      <mat-form-field class="custom-outline-secondary" appearance="outline">
+        <input type="text" matInput class="form-control" formControlName="lastName" placeholder="Enter Last Name" >
+
+        <mat-error *ngIf="tenantDetailsForm.controls['lastName'].errors"  >
+          <div *ngIf="tenantDetailsForm.controls['lastName'].errors['required']" >
+          Last name is <strong>mandatory</strong>
+          </div>
+
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <button class="form-submit" mat-button >Submit</button>
+</form>

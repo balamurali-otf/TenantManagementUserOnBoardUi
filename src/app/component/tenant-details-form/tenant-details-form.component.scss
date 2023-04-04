@@ -1,0 +1,90 @@
+@import "src/styles/input-module";
+@import "src/styles/styleVariables";
+
+.tenant-details-form{
+  width: 60%;
+  padding: 50px 100px 100px;
+  margin: 0 auto;
+  .tenant-details-form-field{
+    width: 100%;
+    .mat-label{
+      width: 100%;
+    }
+    .mat-form-field{
+      width: 100%;
+
+      .suffixtext {
+        position: absolute;
+        right: 0;
+        border-left: 1px solid #cecece;
+        padding: 13px 10px 10px;
+        top: -5px;
+      }
+    }
+
+  }
+  .pointOfContact{
+    padding: 20px 30px 0px;
+    border: 1px solid #3a3636;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #08132c;
+    margin-bottom: 20px;
+
+  h2{
+    font-size: 18px;
+    padding: 0px 0px 20px 0px;
+  }
+  }
+  .form-submit{
+    background-color: #39E6D8;
+    color: #070A1B;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 992px) {
+  .tenant-details-form {
+    width: 80%;
+    padding: 50px 50px 100px;
+  }
+
+}
+@media only screen and (max-width: 480px) {
+  .tenant-details-form {
+    width: 95%;
+    padding: 25px 25px 50px;
+
+  }
+}
+
+::ng-deep .form-submit {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+  background-color: #39E6D8;
+  color: #070A1B;
+  width: 100%;
+}
+
+
+

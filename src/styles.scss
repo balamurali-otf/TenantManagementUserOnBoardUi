@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "src/themes/tenant-theme.scss";
+@import "src/styles/styleVariables";
+@import "src/styles/input-module";
+
+
+// custom scrollbar
+
+*{
+  ::-webkit-scrollbar{
+    width:8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: $scroll-bar-color;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+  }
+  ::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: $sub-containers-background-color;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.4);
+  }
+
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("./assets/fonts/avenir.ttf") format("truetype");
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Avenir Lt Std Roman";
+  src: url("./assets/fonts/AvenirLTStd-Roman.ttf") format("truetype");
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/ProximaNova-Black.ttf") format("truetype");
+  font-style: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("./assets/fonts/proximanova-bold-webfont.ttf") format("truetype");
+  font-style: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url("./assets/fonts/proximanova-light-webfont.ttf") format("truetype");
+  font-style: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url("./assets/fonts/proximanova-reg-webfont.ttf") format("truetype");
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Proxima Nova Semibold";
+  src: url("./assets/fonts/proximanova-semibold-webfont.ttf") format("truetype");
+  font-style: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+html, body { height: 100%; width: 100%}
+body {
+  margin: 0;
+  font-family: "Proxima Nova Regular", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: $body-text-color;
+  //overflow-x: hidden;
+}
+
